@@ -4,24 +4,24 @@
 /*
 PROGRAMM_START
 
-	function (int) crossSum(int number)
+	function crossSum(int number):int
 		int ret = 0
-		while(zahl != 0) 
+		while(number != 0) 
 			DO
 			ret = ret + number % 10
-			number = number/2
+			number = number/10
 		END_WHILE
 		return ret
-	end_function (int) quersumme
+	end_function quersumme
 
-	function (int) getInput()
+	function getInput():int
 		clear(output)
 		print("Type a number :")
 		input = read()
 		return input
-	end_function (int) getInput()
+	end_function  getInput()
 	
-	function (void) generateOutput(int number)
+	function generateOutput(int number):void
 		print(number)
 		system.pause
 	end_function
@@ -45,9 +45,7 @@ END_PROGRAMM
 int crossSum(int number){
 	int ret = 0;
 	while(number!=0){
-		int debug = number % 10;
-		ret=ret + debug;
-		printf("%d| +%d = %d\n",number,debug,ret);
+		ret=ret + number % 10;
 		number = number/10;
 	}
 	return ret;
@@ -64,7 +62,6 @@ int getInput(){
 	int input;
 	scanf("%d",&input);
 	fflush(stdin);
-	printf("input was %d\n",input);
 	return input;
 }
 
@@ -74,7 +71,7 @@ int getInput(){
 *		hält das programm an
 */
 void generateOutput(int number){
-	printf("Cross sum = %d\n",number);
+	printf("CrossSum = %d\n",number);
 	system("pause");
 }
 
